@@ -21,7 +21,6 @@ Open webpage
     Go To    ${url}
 Log into account
     [Documentation]    Login using given username and password
-    [Tags]    [Req 4]
     [Arguments]   ${username}    ${password}
     Log    ${username}
     Log    ${password}
@@ -65,6 +64,7 @@ Cancel a car
     Alert Should Be Present
 
 User is logged in to car booking page
+    [Tags]    VG_test
     Open Browser    browser=Chrome
     Maximize Browser Window
     Go To    ${url}
@@ -73,6 +73,7 @@ User is logged in to car booking page
     Click Button    login
 
 User selects booking dates and car-model
+    [Tags]    VG_test
     ${date1}=    Get Current Date     increment=1d
     ${date2}=    Get Current Date     increment=2d
     Input Text    start    ${date1}  
@@ -82,6 +83,7 @@ User selects booking dates and car-model
 
     
 User inputs its credit card information
+    [Tags]    VG_test
     Input Text    cardNum    ${creditcard}
     Input Text    fullName    ${cardholder}
     Select From List By Label     //*[@id="confirmSelection"]/form/select[1]    4
@@ -90,6 +92,12 @@ User inputs its credit card information
     Click Button    confirm
 
 Selected car is booked
+    [Tags]    VG_test
     Click Button    mypage
-    Get WebElements    model1
+    Page Should Contain Element    //*[@id="middlepane"]/table/tbody/tr[1]
+
+User logs out
+    [Tags]    VG_test
+    Click Button    logout
+    Close Browser
     

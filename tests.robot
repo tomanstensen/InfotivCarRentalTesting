@@ -52,3 +52,4 @@ Booking car using Gherkin-syntax
     When User selects booking dates and car-model
     And User inputs its credit card information
     Then Selected car is booked
+    And User logs out
