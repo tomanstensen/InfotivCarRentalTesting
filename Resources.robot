@@ -6,8 +6,8 @@ Library    DateTime
 
 *** Variables ***
 ${url}    http://rental6.infotiv.net/webpage/html/gui/index.php
-${username}  tom.anstensen@iths.se  
-${password}    IAmUser#6
+${user1}  tom.anstensen@iths.se  
+${passw1}    IAmUser#6
 ${date1}
 ${date2}
 ${creditcard}    1234123412341234
@@ -22,7 +22,11 @@ Open webpage
     Maximize Browser Window
     Go To    ${url}
 Log into account
-    [Documentation]    Login using given username and password    
+    [Documentation]    Login using given username and password
+    [Tags]    [Req 4]
+    [Arguments]   ${username}    ${password}
+    Log    ${username}
+    Log    ${password}
     Input Text    email    ${username}
     Input Password    password    ${password}
     Click Button    login
@@ -47,9 +51,13 @@ Check booking details
     [Documentation]    Going to my account page to check booking is done
     Click Button    mypage
 
+Log out and exit browser
+    [Documentation]    Log out and close browser
+    Click Button    logout
+    Close Browser
 
 Cancel a car
-    [Documentation]
+    [Documentation]    Log in to account and navigate to cancel a former booking
     Click Button    mypage
     Click Button    unBook1
     Alert Should Be Present
