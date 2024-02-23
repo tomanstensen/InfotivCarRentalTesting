@@ -45,10 +45,10 @@ Wrong end-date input
     Log into account    ${user1}    ${passw1}
     Select trip-dates    ${date1}    ${date2}
 
-Booking car using Gherkin
+Booking car using Gherkin-syntax
     [Documentation]    Full flow of booking a car using the Gherkin-syntax
     [Tags]    [VG_test][Req 7]
     Given User is logged in to car booking page
-    When User select booking dates and car-model
-    And Inputs its credit card information
+    When User selects booking dates and car-model
+    And User inputs its credit card information
     Then Selected car is booked
