@@ -1,0 +1,52 @@
+Vad ska finnas med?
+• Godkänt-delen lämnas in av BÅDA personerna som gjort uppgiften
+• Fil(er) innehållande testfallen samt eventuella variabel- och resursfiler som krävs för att
+exekvera testfallen
+• Logg från en körning av testsviten (log.html)
+• Logg från en körning av testsviten (report.html)
+• Dokument med svar på frågorna i slutet av Godkänt-delen
+• Muntlig presentation
+
+
+Checklista för testfall:
+• Testfallen ska namnges på ett tydligt sätt samt innehålla [Documentation] och [Tags]
+• Nyckelord och variabelnamn ska vara lätta att förstå
+• Testfallen ger resultat PASS om kravet är uppfyllt och FAIL om kravet inte är uppfyllt
+• Testfallen använder lämplig setup
+• Testfallen kan köras oberoende av varandra
+
+
+Betygskriterier G
+• Redovisar för specialiserade kunskaper inom framtagande av testfall och olika testverktyg
+• Arbetar med testdesign, testfall och regressionstester
+• Genomför användartester med BDD, DDT och ATDD
+• Designar tester för att testa en produkt på olika nivåer
+• Skapar automatiserade tester i Selenium
+• Använd effektiv arbetsmetodik för att underlätta samarbete och kommunikation inom teamet
+
+
+Uppgift
+Godkänt-del görs i par eller enskilt, Väl godkänt-del görs enskilt
+
+Godkänt-del:
+• [Req 1] Skapa ett testfall som testar navigations-flödet av att boka en bil.
+Testet skall navigera från start-sida, logga in på ett redan existerande konto, boka en bil.
+• [Req 2] Testsviten skall testa minst två olika sidor/funktioner
+• [Req 3] Utgå från kravdokumentationen och koppla varje testfall till en dokumenterad sida/funktion.
+Använd [Tags] och [Documentation] i Robot Framework samt namnge testfallen så att de
+beskriver vad som testas.
+• [Req 4] Åtminstone ett testfall bör skrivas i DDT-format.
+• [Req 5] Minst två negativa testfall
+• [Req 6] Svara på följande frågor i ett dokument du lämnar in (max 1 sida):
+    o Vilka testdesigntekniker har du använt?
+    o Hittade du några avvikelser från kraven?
+    o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att testa manuellt)
+    o Vad var svårast med labben och varför?
+
+
+Väl Godkänt-del:
+[Req 7]
+• Enskilt skapa ett testfall som testar navigations-flödet av att boka en bil.
+• Testet skall navigera från start-sida, logga in på ett redan existerande konto, boka en bil.
+• Testfallet skall ha taggen VG_test
+• Testfallet skall skrivas med Gherkin-syntax
