@@ -1,2 +1,3 @@
 Documentation of deviations from Page Functionality found at http://rental6.infotiv.net/webpage/documentation/index.html
 
+Sorting cars only returns one element when at the car choosing page

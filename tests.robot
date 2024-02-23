@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    A testsuite for the Lab 2, testing the Infotiv Car Rental services webpage.
 Library    SeleniumLibrary
+Library    OperatingSystem
 Resource    Resources.robot
 
 *** Test Cases ***
@@ -43,3 +44,11 @@ Wrong end-date input
     Open webpage
     Log into account    ${user1}    ${passw1}
     Select trip-dates    ${date1}    ${date2}
+
+Booking car using Gherkin
+    [Documentation]    Full flow of booking a car using the Gherkin-syntax
+    [Tags]    [VG_test][Req 7]
+    Given User is logged in to car booking page
+    When User select booking dates and car-model
+    And Inputs its credit card information
+    Then Selected car is booked

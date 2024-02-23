@@ -6,6 +6,7 @@ Answers the reflective questions given from Lab 2. [Req 6]
     
     o Hittade du några avvikelser från kraven?
     Det går inte att sortera listan med bilar och få mer än en bil efter att listan sorterats.
+    Får inte fram någon bokningshistorik. Vet inte vad kriteriet är för att en bokning skall hamna där.
 
     o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att testa manuellt)
     Jag tycker att allt där det behövdes fyllas i information för att gå vidare var det bästa att automatisera.
