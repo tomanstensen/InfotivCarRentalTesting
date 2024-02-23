@@ -1,0 +1,16 @@
+Answers the reflective questions given from Lab 2. [Req 6]
+
+    o Vilka testdesigntekniker har du använt?
+    Jag har utgått från de krav som ställts och sedan skapat test utifrån dessa krav.
+    Jag har använt mig av keyword driven test och DDT för att förenkla testprocessen
+    
+    o Hittade du några avvikelser från kraven?
+    Det går inte att sortera listan med bilar och få mer än en bil efter att listan sorterats.
+
+    o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att testa manuellt)
+    Jag tycker att allt där det behövdes fyllas i information för att gå vidare var det bästa att automatisera.
+    Mer specifikt login och kreditkorts-informationen var smidigare att ha automatiserat.
+
+    o Vad var svårast med labben och varför?
+    Det svåraste var att hitta rätt webelement som skulle användas. 
+    Det var svårast då jag inte var bekant med detta innan.

@@ -8,8 +8,6 @@ Library    DateTime
 ${url}    http://rental6.infotiv.net/webpage/html/gui/index.php
 ${user1}  tom.anstensen@iths.se  
 ${passw1}    IAmUser#6
-${date1}
-${date2}
 ${creditcard}    1234123412341234
 ${cardholder}    Tom Anstensen
 ${cvc}    123
@@ -30,20 +28,24 @@ Log into account
     Input Text    email    ${username}
     Input Password    password    ${password}
     Click Button    login
+
 Select trip-dates
     [Documentation]    Selecting tripdates
-    ${date1}=    Get Current Date     increment=1d
-    ${date2}=    Get Current Date     increment=2d
+    [Arguments]    ${date1}    ${date2}
     Input Text    start    ${date1}  
     Input Text    end    ${date2}
     Click Button    continue
+
 Choose car and press book
     [Documentation]    Selecting car    
     Click Button    bookTTpass2
+
 Confirm booking
     [Documentation]    Input of credit card information to confirm booking
     Input Text    cardNum    ${creditcard}
     Input Text    fullName    ${cardholder}
+    Select From List By Label     //*[@id="confirmSelection"]/form/select[1]    4
+    Select From List By Label    //*[@id="confirmSelection"]/form/select[2]    2024
     Input Password    cvc    ${cvc}
     Click Button    confirm
 
