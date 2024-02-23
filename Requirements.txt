@@ -29,24 +29,24 @@ Uppgift
 Godkänt-del görs i par eller enskilt, Väl godkänt-del görs enskilt
 
 Godkänt-del:
-• Skapa ett testfall som testar navigations-flödet av att boka en bil.
+• [Req 1] Skapa ett testfall som testar navigations-flödet av att boka en bil.
 Testet skall navigera från start-sida, logga in på ett redan existerande konto, boka en bil.
-• Testsviten skall testa minst två olika sidor/funktioner
-• Utgå från kravdokumentationen och koppla varje testfall till en dokumenterad sida/funktion.
+• [Req 2] Testsviten skall testa minst två olika sidor/funktioner
+• [Req 3] Utgå från kravdokumentationen och koppla varje testfall till en dokumenterad sida/funktion.
 Använd [Tags] och [Documentation] i Robot Framework samt namnge testfallen så att de
 beskriver vad som testas.
-• Åtminstone ett testfall bör skrivas i DDT-format.
-• Minst två negativa testfall
-• Svara på följande frågor i ett dokument du lämnar in (max 1 sida):
-o Vilka testdesigntekniker har du använt?
-o Hittade du några avvikelser från kraven?
-o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att
-testa manuellt)
-o Vad var svårast med labben och varför?
+• [Req 4] Åtminstone ett testfall bör skrivas i DDT-format.
+• [Req 5] Minst två negativa testfall
+• [Req 6] Svara på följande frågor i ett dokument du lämnar in (max 1 sida):
+    o Vilka testdesigntekniker har du använt?
+    o Hittade du några avvikelser från kraven?
+    o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att testa manuellt)
+    o Vad var svårast med labben och varför?
 
 
 Väl Godkänt-del:
+[Req 7]
 • Enskilt skapa ett testfall som testar navigations-flödet av att boka en bil.
 • Testet skall navigera från start-sida, logga in på ett redan existerande konto, boka en bil.
 • Testfallet skall ha taggen VG_test
-• Testfallet skall skrivas med Gherkin-synta
+• Testfallet skall skrivas med Gherkin-syntax
