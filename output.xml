@@ -1,179 +1,678 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-23T12:13:10.015218" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-26T14:49:37.413239" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="c:\Coding\InfotivCarRentalTesting\tests.robot">
-<test id="s1-t1" name="Booking car using Gherkin-syntax" line="48">
-<kw name="Given User is logged in to car booking page" owner="Resources">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:10.263058" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<arg>browser=Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-23T12:13:10.263058" elapsed="1.421684"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-23T12:13:11.685770" elapsed="0.118709"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:11.805526" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-23T12:13:11.804479" elapsed="0.210334"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:12.016246" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
-<arg>email</arg>
-<arg>${user1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.015813" elapsed="0.151065"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:12.167904" level="INFO">Typing password into text field 'password'.</msg>
-<msg time="2024-02-23T12:13:12.203639" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>password</arg>
-<arg>${passw1}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.166878" elapsed="0.097591"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:12.264469" level="INFO">Clicking button 'login'.</msg>
-<arg>login</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.264469" elapsed="0.233199"/>
-</kw>
-<status status="PASS" start="2024-02-23T12:13:10.263058" elapsed="2.235621"/>
-</kw>
-<kw name="When User selects booking dates and car-model" owner="Resources">
+<test id="s1-t1" name="Infotiv car rental services" line="8">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-02-23T12:13:12.500680" level="INFO">${date1} = 2024-02-24 12:13:12.501</msg>
+<msg time="2024-02-26T14:49:38.297741" level="INFO">${date1} = 2024-02-27 14:49:38.297</msg>
 <var>${date1}</var>
 <arg>increment=1d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.499682" elapsed="0.000998"/>
+<status status="PASS" start="2024-02-26T14:49:38.293737" elapsed="0.010148"/>
 </kw>
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-02-23T12:13:12.500680" level="INFO">${date2} = 2024-02-25 12:13:12.501</msg>
+<msg time="2024-02-26T14:49:38.308881" level="INFO">${date2} = 2024-02-28 14:49:38.308</msg>
 <var>${date2}</var>
 <arg>increment=2d</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.500680" elapsed="0.001037"/>
+<status status="PASS" start="2024-02-26T14:49:38.305884" elapsed="0.002997"/>
+</kw>
+<kw name="Open webpage" owner="Resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:38.315390" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:38.312881" elapsed="1.447924"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:49:39.761802" elapsed="0.124349"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:39.888151" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:39.887153" elapsed="0.224145"/>
+</kw>
+<doc>Opens the browser to selected url</doc>
+<status status="PASS" start="2024-02-26T14:49:38.310885" elapsed="1.802935"/>
+</kw>
+<kw name="Log into account" owner="Resources">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:40.122830" level="INFO">tom.anstensen@iths.se</msg>
+<arg>${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:40.119829" elapsed="0.004519"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:40.128346" level="INFO">IAmUser#6</msg>
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:40.126349" elapsed="0.003000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:12.502330" level="INFO">Typing text '2024-02-24 12:13:12.501' into text field 'start'.</msg>
+<msg time="2024-02-26T14:49:40.131350" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:40.130346" elapsed="0.157908"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:40.290300" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-02-26T14:49:40.330064" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:40.289297" elapsed="0.103695"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:40.394997" level="INFO">Clicking button 'login'.</msg>
+<arg>login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:40.393998" elapsed="0.219378"/>
+</kw>
+<arg>${user1}</arg>
+<arg>${passw1}</arg>
+<doc>Login using given username and password</doc>
+<status status="PASS" start="2024-02-26T14:49:40.116830" elapsed="0.497557"/>
+</kw>
+<kw name="Select trip-dates" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:40.621389" level="INFO">Typing text '2024-02-27 14:49:38.297' into text field 'start'.</msg>
 <arg>start</arg>
 <arg>${date1}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.501717" elapsed="0.138365"/>
+<status status="PASS" start="2024-02-26T14:49:40.618385" elapsed="0.137732"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:12.640082" level="INFO">Typing text '2024-02-25 12:13:12.501' into text field 'end'.</msg>
+<msg time="2024-02-26T14:49:40.759124" level="INFO">Typing text '2024-02-28 14:49:38.308' into text field 'end'.</msg>
 <arg>end</arg>
 <arg>${date2}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:12.640082" elapsed="0.372447"/>
+<status status="PASS" start="2024-02-26T14:49:40.757121" elapsed="0.435877"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.012529" level="INFO">Clicking button 'continue'.</msg>
+<msg time="2024-02-26T14:49:41.194508" level="INFO">Clicking button 'continue'.</msg>
 <arg>continue</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.012529" elapsed="0.251810"/>
+<status status="PASS" start="2024-02-26T14:49:41.193503" elapsed="0.263890"/>
 </kw>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+<doc>Selecting tripdates</doc>
+<status status="PASS" start="2024-02-26T14:49:40.616387" elapsed="0.841006"/>
+</kw>
+<kw name="Choose car and press book" owner="Resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.264339" level="INFO">Clicking button 'bookTTpass2'.</msg>
+<msg time="2024-02-26T14:49:41.462901" level="INFO">Clicking button 'bookTTpass2'.</msg>
 <arg>bookTTpass2</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.264339" elapsed="0.171098"/>
+<status status="PASS" start="2024-02-26T14:49:41.461360" elapsed="0.187933"/>
 </kw>
-<status status="PASS" start="2024-02-23T12:13:12.499682" elapsed="0.936754"/>
+<doc>Selecting car</doc>
+<status status="PASS" start="2024-02-26T14:49:41.460358" elapsed="0.189932"/>
 </kw>
-<kw name="And User inputs its credit card information" owner="Resources">
+<kw name="Confirm booking" owner="Resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.436436" level="INFO">Typing text '1234123412341234' into text field 'cardNum'.</msg>
+<msg time="2024-02-26T14:49:41.657868" level="INFO">Typing text '1234123412341234' into text field 'cardNum'.</msg>
 <arg>cardNum</arg>
 <arg>${creditcard}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.436436" elapsed="0.104528"/>
+<status status="PASS" start="2024-02-26T14:49:41.656828" elapsed="0.120273"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.541858" level="INFO">Typing text 'Tom Anstensen' into text field 'fullName'.</msg>
+<msg time="2024-02-26T14:49:41.779102" level="INFO">Typing text 'Tom Anstensen' into text field 'fullName'.</msg>
 <arg>fullName</arg>
 <arg>${cardholder}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.541858" elapsed="0.111802"/>
+<status status="PASS" start="2024-02-26T14:49:41.777101" elapsed="0.122195"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.653660" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[1]' by label 4.</msg>
+<msg time="2024-02-26T14:49:41.901296" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[1]' by label 4.</msg>
 <arg>//*[@id="confirmSelection"]/form/select[1]</arg>
 <arg>4</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.653660" elapsed="0.079954"/>
+<status status="PASS" start="2024-02-26T14:49:41.900340" elapsed="0.108695"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.733614" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[2]' by label 2024.</msg>
+<msg time="2024-02-26T14:49:42.011035" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[2]' by label 2024.</msg>
 <arg>//*[@id="confirmSelection"]/form/select[2]</arg>
 <arg>2024</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.733614" elapsed="0.072362"/>
+<status status="PASS" start="2024-02-26T14:49:42.010035" elapsed="0.093033"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.805976" level="INFO">Typing password into text field 'cvc'.</msg>
-<msg time="2024-02-23T12:13:13.836014" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-02-26T14:49:42.106398" level="INFO">Typing password into text field 'cvc'.</msg>
+<msg time="2024-02-26T14:49:42.152837" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>cvc</arg>
 <arg>${cvc}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.805976" elapsed="0.079372"/>
+<status status="PASS" start="2024-02-26T14:49:42.104430" elapsed="0.106635"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.885348" level="INFO">Clicking button 'confirm'.</msg>
+<msg time="2024-02-26T14:49:42.213068" level="INFO">Clicking button 'confirm'.</msg>
 <arg>confirm</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.885348" elapsed="0.105584"/>
+<status status="PASS" start="2024-02-26T14:49:42.212069" elapsed="0.120799"/>
 </kw>
-<status status="PASS" start="2024-02-23T12:13:13.436436" elapsed="0.554496"/>
+<doc>Input of credit card information to confirm booking</doc>
+<status status="PASS" start="2024-02-26T14:49:41.653812" elapsed="0.680063"/>
 </kw>
-<kw name="Then Selected car is booked" owner="Resources">
+<kw name="Check booking details" owner="Resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:13.992101" level="INFO">Clicking button 'mypage'.</msg>
+<msg time="2024-02-26T14:49:42.339436" level="INFO">Clicking button 'mypage'.</msg>
 <arg>mypage</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:13.992101" elapsed="0.103073"/>
+<status status="PASS" start="2024-02-26T14:49:42.337885" elapsed="0.127083"/>
 </kw>
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:14.109973" level="INFO">Current page contains element '//*[@id="middlepane"]/table/tbody/tr[1]'.</msg>
-<arg>//*[@id="middlepane"]/table/tbody/tr[1]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-02-23T12:13:14.095174" elapsed="0.014799"/>
+<doc>Going to my account page to check booking is done</doc>
+<status status="PASS" start="2024-02-26T14:49:42.336886" elapsed="0.129084"/>
 </kw>
-<status status="PASS" start="2024-02-23T12:13:13.992101" elapsed="0.117872"/>
-</kw>
-<kw name="And User logs out" owner="Resources">
+<kw name="Log out and exit browser" owner="Resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-02-23T12:13:14.110983" level="INFO">Clicking button 'logout'.</msg>
+<msg time="2024-02-26T14:49:42.470965" level="INFO">Clicking button 'logout'.</msg>
 <arg>logout</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-23T12:13:14.110983" elapsed="0.145989"/>
+<status status="PASS" start="2024-02-26T14:49:42.469965" elapsed="0.153447"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-23T12:13:14.256972" elapsed="2.065310"/>
+<status status="PASS" start="2024-02-26T14:49:42.624424" elapsed="2.107723"/>
 </kw>
-<status status="PASS" start="2024-02-23T12:13:14.110983" elapsed="2.211688"/>
+<doc>Log out and close browser</doc>
+<status status="PASS" start="2024-02-26T14:49:42.467970" elapsed="2.268732"/>
+</kw>
+<doc>Testing the navigational flow of booking a car</doc>
+<tag>[Req 1][Req 2][Req 3][Req 4]</tag>
+<status status="PASS" start="2024-02-26T14:49:38.285272" elapsed="6.464589"/>
+</test>
+<test id="s1-t2" name="Cancel a booking" line="22">
+<kw name="Open webpage" owner="Resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:44.776088" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:44.774086" elapsed="1.371976"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.148063" elapsed="0.134756"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:46.289396" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.286360" elapsed="0.203552"/>
+</kw>
+<doc>Opens the browser to selected url</doc>
+<status status="PASS" start="2024-02-26T14:49:44.770564" elapsed="1.720347"/>
+</kw>
+<kw name="Log into account" owner="Resources">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:46.499438" level="INFO">tom.anstensen@iths.se</msg>
+<arg>${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.497440" elapsed="0.002998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:46.503959" level="INFO">IAmUser#6</msg>
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.501440" elapsed="0.003518"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:46.509966" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.506966" elapsed="0.170475"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:46.678438" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-02-26T14:49:46.719473" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.677441" elapsed="0.103637"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:46.782079" level="INFO">Clicking button 'login'.</msg>
+<arg>login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:46.782079" elapsed="0.222997"/>
+</kw>
+<arg>${user1}</arg>
+<arg>${passw1}</arg>
+<doc>Login using given username and password</doc>
+<status status="PASS" start="2024-02-26T14:49:46.493416" elapsed="0.512661"/>
+</kw>
+<kw name="Cancel a car" owner="Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:47.012083" level="INFO">Clicking button 'mypage'.</msg>
+<arg>mypage</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:47.011080" elapsed="0.129992"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:47.143068" level="INFO">Clicking button 'unBook1'.</msg>
+<arg>unBook1</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:47.142070" elapsed="0.079256"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:47.223900" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-02-26T14:49:47.221326" elapsed="0.013948"/>
+</kw>
+<doc>Log in to account and navigate to cancel a former booking</doc>
+<status status="PASS" start="2024-02-26T14:49:47.009081" elapsed="0.226193"/>
+</kw>
+<kw name="Log out and exit browser" owner="Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:47.241273" level="INFO">Clicking button 'logout'.</msg>
+<arg>logout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:47.240274" elapsed="0.193948"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-26T14:49:47.435263" elapsed="2.086303"/>
+</kw>
+<doc>Log out and close browser</doc>
+<status status="PASS" start="2024-02-26T14:49:47.238277" elapsed="2.284798"/>
+</kw>
+<doc>Removing a booked car from 'My page'</doc>
+<tag>[Req 2][Req 3][Req 4]</tag>
+<status status="PASS" start="2024-02-26T14:49:44.761430" elapsed="4.762655"/>
+</test>
+<test id="s1-t3" name="Wrong start-date input" line="30">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:49.532128" level="INFO">${date1} = 2024-02-25 14:49:49.532</msg>
+<var>${date1}</var>
+<arg>increment=-1d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:49.531083" elapsed="0.001045"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:49.536477" level="INFO">${date2} = 2024-02-29 14:49:49.535</msg>
+<var>${date2}</var>
+<arg>increment=3d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:49.534475" elapsed="0.002002"/>
+</kw>
+<kw name="Open webpage" owner="Resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:49.540475" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:49.540475" elapsed="1.341492"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:49:50.883476" elapsed="0.121870"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.007345" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.006346" elapsed="0.203590"/>
+</kw>
+<doc>Opens the browser to selected url</doc>
+<status status="PASS" start="2024-02-26T14:49:49.538475" elapsed="1.673465"/>
+</kw>
+<kw name="Log into account" owner="Resources">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:51.221460" level="INFO">tom.anstensen@iths.se</msg>
+<arg>${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.220454" elapsed="0.001006"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:51.225978" level="INFO">IAmUser#6</msg>
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.223980" elapsed="0.002996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.228975" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.227976" elapsed="0.144114"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.373602" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-02-26T14:49:51.414072" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.373091" elapsed="0.104611"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.480704" level="INFO">Clicking button 'login'.</msg>
+<arg>login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.478701" elapsed="0.226859"/>
+</kw>
+<arg>${user1}</arg>
+<arg>${passw1}</arg>
+<doc>Login using given username and password</doc>
+<status status="PASS" start="2024-02-26T14:49:51.216458" elapsed="0.490101"/>
+</kw>
+<kw name="Select trip-dates" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.714073" level="INFO">Typing text '2024-02-25 14:49:49.532' into text field 'start'.</msg>
+<arg>start</arg>
+<arg>${date1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.713068" elapsed="0.140699"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:51.856778" level="INFO">Typing text '2024-02-29 14:49:49.535' into text field 'end'.</msg>
+<arg>end</arg>
+<arg>${date2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:51.854767" elapsed="0.448797"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:52.306578" level="INFO">Clicking button 'continue'.</msg>
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:52.304570" elapsed="0.096239"/>
+</kw>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+<doc>Selecting tripdates</doc>
+<status status="PASS" start="2024-02-26T14:49:51.710564" elapsed="0.691288"/>
+</kw>
+<doc>Giving the wrong input to booking start-date</doc>
+<tag>[Req 4][Req 5]</tag>
+<status status="PASS" start="2024-02-26T14:49:49.527087" elapsed="2.876811"/>
+</test>
+<test id="s1-t4" name="Wrong end-date input" line="39">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:52.414513" level="INFO">${date1} = 2024-02-27 14:49:52.413</msg>
+<var>${date1}</var>
+<arg>increment=1d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:52.410908" elapsed="0.004604"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:52.419470" level="INFO">${date2} = 2024-02-23 14:49:52.419</msg>
+<var>${date2}</var>
+<arg>increment=-3d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:52.416468" elapsed="0.003002"/>
+</kw>
+<kw name="Open webpage" owner="Resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:52.423045" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:52.423045" elapsed="1.389121"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:49:53.813675" elapsed="0.122893"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:53.939574" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:53.937567" elapsed="0.178798"/>
+</kw>
+<doc>Opens the browser to selected url</doc>
+<status status="PASS" start="2024-02-26T14:49:52.421468" elapsed="1.695901"/>
+</kw>
+<kw name="Log into account" owner="Resources">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:54.125889" level="INFO">tom.anstensen@iths.se</msg>
+<arg>${username}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.123883" elapsed="0.003008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-26T14:49:54.130893" level="INFO">IAmUser#6</msg>
+<arg>${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.128887" elapsed="0.003006"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:54.137427" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.134415" elapsed="0.148420"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:54.284842" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-02-26T14:49:54.323253" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.283842" elapsed="0.101374"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:54.386212" level="INFO">Clicking button 'login'.</msg>
+<arg>login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.386212" elapsed="0.250505"/>
+</kw>
+<arg>${user1}</arg>
+<arg>${passw1}</arg>
+<doc>Login using given username and password</doc>
+<status status="PASS" start="2024-02-26T14:49:54.120368" elapsed="0.517354"/>
+</kw>
+<kw name="Select trip-dates" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:54.645247" level="INFO">Typing text '2024-02-27 14:49:52.413' into text field 'start'.</msg>
+<arg>start</arg>
+<arg>${date1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.644247" elapsed="0.135741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:54.784109" level="INFO">Typing text '2024-02-23 14:49:52.419' into text field 'end'.</msg>
+<arg>end</arg>
+<arg>${date2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:54.780988" elapsed="0.450438"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:55.234943" level="INFO">Clicking button 'continue'.</msg>
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:55.232936" elapsed="0.110180"/>
+</kw>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+<doc>Selecting tripdates</doc>
+<status status="PASS" start="2024-02-26T14:49:54.641718" elapsed="0.702408"/>
+</kw>
+<doc>Giving the wrong input to booking end-date</doc>
+<tag>[Req 4][Req 5]</tag>
+<status status="PASS" start="2024-02-26T14:49:52.406908" elapsed="2.938218"/>
+</test>
+<test id="s1-t5" name="Booking car using Gherkin-syntax" line="48">
+<kw name="Given User is logged in to car booking page" owner="Resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:55.358646" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:55.357647" elapsed="1.495272"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-26T14:49:56.853951" elapsed="0.122603"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:56.978552" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-02-26T14:49:56.977552" elapsed="0.188436"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:57.170988" level="INFO">Typing text 'tom.anstensen@iths.se' into text field 'email'.</msg>
+<arg>email</arg>
+<arg>${user1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.166986" elapsed="0.159806"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:57.329791" level="INFO">Typing password into text field 'password'.</msg>
+<msg time="2024-02-26T14:49:57.373440" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>password</arg>
+<arg>${passw1}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.328795" elapsed="0.104477"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:57.434685" level="INFO">Clicking button 'login'.</msg>
+<arg>login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.433272" elapsed="0.234156"/>
+</kw>
+<tag>VG_test</tag>
+<status status="PASS" start="2024-02-26T14:49:55.354637" elapsed="2.314795"/>
+</kw>
+<kw name="When User selects booking dates and car-model" owner="Resources">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:57.676968" level="INFO">${date1} = 2024-02-27 14:49:57.677</msg>
+<var>${date1}</var>
+<arg>increment=1d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.672938" elapsed="0.005028"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-02-26T14:49:57.679480" level="INFO">${date2} = 2024-02-28 14:49:57.679</msg>
+<var>${date2}</var>
+<arg>increment=2d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.678474" elapsed="0.001006"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:57.684000" level="INFO">Typing text '2024-02-27 14:49:57.677' into text field 'start'.</msg>
+<arg>start</arg>
+<arg>${date1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.680480" elapsed="0.150252"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:57.831731" level="INFO">Typing text '2024-02-28 14:49:57.679' into text field 'end'.</msg>
+<arg>end</arg>
+<arg>${date2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:57.831731" elapsed="0.464187"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:58.298426" level="INFO">Clicking button 'continue'.</msg>
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:58.296920" elapsed="0.249502"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:58.548418" level="INFO">Clicking button 'bookTTpass2'.</msg>
+<arg>bookTTpass2</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:58.547418" elapsed="0.156096"/>
+</kw>
+<tag>VG_test</tag>
+<status status="PASS" start="2024-02-26T14:49:57.671429" elapsed="1.033095"/>
+</kw>
+<kw name="And User inputs its credit card information" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:58.715044" level="INFO">Typing text '1234123412341234' into text field 'cardNum'.</msg>
+<arg>cardNum</arg>
+<arg>${creditcard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:58.711531" elapsed="0.134403"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:58.849935" level="INFO">Typing text 'Tom Anstensen' into text field 'fullName'.</msg>
+<arg>fullName</arg>
+<arg>${cardholder}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:58.846938" elapsed="0.122358"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:58.971294" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[1]' by label 4.</msg>
+<arg>//*[@id="confirmSelection"]/form/select[1]</arg>
+<arg>4</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-26T14:49:58.970295" elapsed="0.088726"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.061061" level="INFO">Selecting options from selection list '//*[@id="confirmSelection"]/form/select[2]' by label 2024.</msg>
+<arg>//*[@id="confirmSelection"]/form/select[2]</arg>
+<arg>2024</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.060062" elapsed="0.090551"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.151647" level="INFO">Typing password into text field 'cvc'.</msg>
+<msg time="2024-02-26T14:49:59.199501" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>cvc</arg>
+<arg>${cvc}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.151647" elapsed="0.104445"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.259054" level="INFO">Clicking button 'confirm'.</msg>
+<arg>confirm</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.257097" elapsed="0.116879"/>
+</kw>
+<tag>VG_test</tag>
+<status status="PASS" start="2024-02-26T14:49:58.707534" elapsed="0.667440"/>
+</kw>
+<kw name="Then Selected car is booked" owner="Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.380005" level="INFO">Clicking button 'mypage'.</msg>
+<arg>mypage</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.379006" elapsed="0.126139"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.524191" level="INFO">Current page contains element '//*[@id="middlepane"]/table/tbody/tr[1]'.</msg>
+<arg>//*[@id="middlepane"]/table/tbody/tr[1]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.507146" elapsed="0.018042"/>
+</kw>
+<tag>VG_test</tag>
+<status status="PASS" start="2024-02-26T14:49:59.377973" elapsed="0.147215"/>
+</kw>
+<kw name="And User logs out" owner="Resources">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-26T14:49:59.531386" level="INFO">Clicking button 'logout'.</msg>
+<arg>logout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.530351" elapsed="0.178932"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-26T14:49:59.711288" elapsed="2.098201"/>
+</kw>
+<tag>VG_test</tag>
+<status status="PASS" start="2024-02-26T14:49:59.527351" elapsed="2.282138"/>
 </kw>
 <doc>Full flow of booking a car using the Gherkin-syntax</doc>
 <tag>[VG_test][Req 7]</tag>
-<status status="PASS" start="2024-02-23T12:13:10.247433" elapsed="6.075583"/>
+<status status="PASS" start="2024-02-26T14:49:55.347126" elapsed="6.464364"/>
 </test>
 <doc>A testsuite for the Lab 2, testing the Infotiv Car Rental services webpage.</doc>
-<status status="PASS" start="2024-02-23T12:13:10.021221" elapsed="6.301795"/>
+<status status="PASS" start="2024-02-26T14:49:37.428834" elapsed="24.388177"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">[Req 1][Req 2][Req 3][Req 4]</stat>
+<stat pass="1" fail="0" skip="0">[Req 2][Req 3][Req 4]</stat>
+<stat pass="2" fail="0" skip="0">[Req 4][Req 5]</stat>
 <stat pass="1" fail="0" skip="0">[VG_test][Req 7]</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="5" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
 </suite>
 </statistics>
 <errors>

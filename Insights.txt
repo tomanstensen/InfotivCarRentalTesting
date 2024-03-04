@@ -1,17 +1,32 @@
 Answers the reflective questions given from Lab 2. [Req 6]
 
     o Vilka testdesigntekniker har du använt?
-    Jag har utgått från de krav som ställts och sedan skapat test utifrån dessa krav.
-    Jag har använt mig av keyword driven test och DDT för att förenkla testprocessen
+    Jag startade med att bryta ner de krav som fanns för att få dom olika betygen i enskilda delar och skapade mig på det sättet en bra överblick
+    över vad som behövde göras för att uppnå de olika betygen.
+    För att göra det enklare för mig att spåra och hålla koll på vad jag hade gjort så gav jag varje enskild del ett eget unikt ID.
+    När detta var klart så kunde jag börja skapa mina test. Detta blev då arbetssättet BDD då testen skapas först för att sedan driva vilken kod som skapas.
+    Metoden att skapa testen först och låta dom "faila" för att sedan skriva den kod som behövs för att testen skall bli godkända tillhör även det BDD.
+    ATDD användes när jag skapade acceptanskraven för uppgiften innan jag startade att koda så att ingen onödig kod behövde skapas.
+    Det gav mig en tydlig bild av vad som behövde skapas för att jag skulle vara klar med uppgiften.
+
+    I denna uppgiften har keyword driven testing varit grunden i mina test för att förenkla läsbarheten i koden.
+    Dessa keywords har jag lagt i en separat Resources-fil vilket gör att själva testsviten ser renare ut. (Clean code)
+    För att kunna ha en mer flexibel kod så har DDT (Data-Driven Testing) implementerats, vilket har gjort det lättare för mig att använda variabler
+    då dessa bara behöver definieras en gång, och kan sedan användas många gånger, och inte är hård-kodade i själva testen.
+
+    Samtidigt som jag har skapat testen har jag använt mig av utforskande testning för att se hur websidan fungerar och vilka test jag behöver skapa
+    för att kunna gå vidare mellan olika sidor.
     
     o Hittade du några avvikelser från kraven?
-    Det går inte att sortera listan med bilar och få mer än en bil efter att listan sorterats.
-    Får inte fram någon bokningshistorik. Vet inte vad kriteriet är för att en bokning skall hamna där.
+    Jag hittade inte många fel men den största avvikelsen från dokumentationen var sorteringsfunktionen för tillgängliga bilar.
+    När man försöker sortera så för man bara upp ett alternativ i listan även om det skall finnas fler bilar tillgängliga.
+    Jag ställer mig även frågande till historiken för bokade bilar då jag inte kan se historik för alla bilar som jag försökt boka.
 
     o Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att testa manuellt)
-    Jag tycker att allt där det behövdes fyllas i information för att gå vidare var det bästa att automatisera.
-    Mer specifikt login och kreditkorts-informationen var smidigare att ha automatiserat.
+    Ifyllning av textfält är det som jag tycker ger mest att automatisera. Det går snabbare när information är sparad i en variabel istället för att 
+    det skall fyllas i manuellt varje gång.
+    Att klicka på knappar går ungefär lika fort eller snabbare att göra manuellt via utforskande testning.
 
     o Vad var svårast med labben och varför?
-    Det svåraste var att hitta rätt webelement som skulle användas. 
-    Det var svårast då jag inte var bekant med detta innan.
+    Det svåraste var att hitta rätt web-element som skulle användas. Men lite googlande kunde lösa detta relativt snabbt.
+    Att hämta information om de bilar som fanns tillgängliga och de som jag bokat tyckte jag var utmanande och har krävt mer efterforskning för att lära mig.
